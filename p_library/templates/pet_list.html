@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<table class="table table-striped table-sm table-bordered">
+	<thead class="thead-dark">
+		<tr>
+			<th>&nbsp;</th>
+			<th>Вид</th>
+			<th>Фото</th>
+			<th>Кличка</th>
+			<th>Пол</th>
+			<th>Порода</th>
+			<th>Описание</th>
+			<th>Возраст</th>
+		</tr>
+	</thead>
+	<tbody>
+	{% for pet in object_list %}
+		<tr>
+			<td>{{ forloop.counter }}</td>
+			<td>{{ pet.type_pet }}</td>
+			<td>
+				{% if pet.photo %}
+				<img src="{{ pet.photo.url }}" width="100" height="100" alt="">
+				{% endif %}
+			</td>
+			<td>{{ pet.name }}</td>
+			<td>{{ pet.sex }}</td>
+			<td>{{ pet.pet_breed }}</td>
+			<td>{{ pet.description }}</td>
+			<td>{{ pet.age }}</td>
+		</tr>
+	{% endfor %}
+	</tbody>
+</table>
+
+{% endblock body%}

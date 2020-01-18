@@ -1,0 +1,27 @@
+
+.container-fluid {
+  color: white;
+}
+
+.dark-bg {
+  color: white;
+  background-color: black;
+  opacity: 0.75;
+}
+
+.space {
+  height: 3vh;
+}
+
+th {
+  color: white;
+}
+
+td {
+	color: black;
+}
+
+.wrapper {
+  text-align: center;
+  padding: 5vw;
+}

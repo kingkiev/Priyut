@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Животные &mdash; людям {% block extra_title %}{% endblock extra_title %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block bootstrap_header %}
+    {% load static %}
+    <link rel="stylesheet" href='{% static "css/bootstrap.min.css" %}'>
+    {% endblock bootstrap_header %}
+    <link rel="stylesheet" href='{% static "css/style.css" %}'>
+    <link rel="icon" type="image/x-icon" href='{% static "img/favicon.ico" %}'>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+</head>
+<body>
+   <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 dark-bg">
+                <nav class="navbar navbar-expand navbar-dark bg-transparent">
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav mr-auto">
+                        <li id="menu-item-main" class="nav-item">
+                            <a  class="nav-link" href="/">Главная</span></a>
+                        </li>
+                        <li id="menu-item-redactions" class="nav-item">
+                            <a class="nav-link" href="/pet_list">Наши животные</a>
+                        </li>
+                        <li id="menu-item-lended" class="nav-item">
+                            <a class="nav-link" href="/about">О нас</a>
+                        </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col space">
+            </div>
+        </div>
+
+    <div class="container">
+        {% block body %}
+        {% endblock body %}
+    </div>
+</body>
